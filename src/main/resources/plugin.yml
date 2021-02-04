@@ -1,0 +1,4 @@
+name: MongoSpigot
+version: ${project.version}
+main: me.ialext.mongospigot.MongoSpigot
+api-version: 1.16
