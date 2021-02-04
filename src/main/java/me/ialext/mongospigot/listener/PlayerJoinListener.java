@@ -25,15 +25,6 @@ public class PlayerJoinListener implements Listener {
   public void onPlayerJoin(PlayerJoinEvent event) {
     Player player = event.getPlayer();
     Optional<User> optionalUser = userObjectRepository.findOneSync(player.getUniqueId().toString());
-    if (!optionalUser.isPresent()) {
-      for (int i = 0; i < 50; i++) {
-        System.out.println("PLAYER NOT FOUND");
-      }
-    } else {
-      for (int i = 0; i < 50; i++) {
-        System.out.println("PLAYER FOUND IN DATABASE");
-      }
-    }
 
     userCache.add(player.getUniqueId(), optionalUser.orElse(new UserImpl(player.getUniqueId().toString())));
   }
