@@ -11,7 +11,6 @@ public class UserImpl implements User {
 
   @JsonIgnore
   private final Player delegate;
-
   private final String id;
 
   @ConstructorProperties("id")
