@@ -112,4 +112,5 @@ public class MongoObjectRepository<O extends Model> implements ObjectRepository<
       saveSync(o);
     }
   }
+
 }
